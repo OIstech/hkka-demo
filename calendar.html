@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>綜合活動行事曆 · Schedule in One — 香港劍道協會</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<section class="page-head">
+  <div class="container">
+    <nav class="crumbs" aria-label="路徑"><a href="index.html">主頁</a><span>/</span><a href="#">活動</a><span>/</span><span>綜合活動行事曆</span></nav>
+    <h1>綜合活動行事曆</h1>
+    <p>講習會、比賽、段級審查、訓練班及會務日程一覽。可按類別篩選，點選活動查看詳情及報名。</p>
+  </div>
+</section>
+
+<section class="page-body cal-page">
+  <div class="container">
+    <div class="cal" id="cal">
+      <aside class="cal__side" id="calSide">
+        <div class="minical" id="mini"></div>
+        <div class="cal__group">
+          <h4>活動類別</h4>
+          <div id="calCats"></div>
+        </div>
+        <div class="cal__group">
+          <h4>訂閱</h4>
+          <a class="link" href="#">訂閱行事曆（iCal） <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <p class="meta" style="margin-top:6px">活動時間以香港時間（HKT）為準。如遇惡劣天氣，以通告為準。</p>
+        </div>
+      </aside>
+
+      <div class="cal__main">
+        <div class="cal__bar">
+          <div class="cal__nav">
+            <button class="btn btn--outline btn--sm" data-nav="today">今天</button>
+            <button class="cal__arrow" data-nav="-1" aria-label="上一頁"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+            <button class="cal__arrow" data-nav="1" aria-label="下一頁"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+            <h2 class="cal__title" id="calTitle" aria-live="polite"></h2>
+          </div>
+          <div class="cal__tools">
+            <button class="btn btn--outline btn--sm cal__filter-btn" id="calFilterBtn" aria-expanded="false">篩選</button>
+            <div class="seg" role="group" aria-label="檢視">
+              <button data-view="month">月</button><button data-view="week">週</button><button data-view="agenda">議程</button>
+            </div>
+          </div>
+        </div>
+        <div class="cal__view" id="calView"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cal-pop" id="calPop" role="dialog" aria-modal="false" hidden></div>
+
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script src="assets/calendar.js"></script>
+</body>
+</html>
