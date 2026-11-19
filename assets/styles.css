@@ -735,3 +735,93 @@ html,body{overflow-x:clip}
 .circ-info dt{color:var(--muted)}
 .circ-info dd{margin:0;color:var(--ink)}
 @media(min-width:1024px){.circ-info{position:sticky;top:calc(var(--header-h) + 24px)}}
+
+/* ============================================================
+   Dojo palette — colour-only branding layer (no layout changes)
+   藍 blue stays the main colour; 朱 vermilion red and 木 wood brown
+   are accents; 和紙 warm paper replaces cool grey tints.
+   ============================================================ */
+:root{
+  --shu-700:#9b1f24;   /* 朱 deep */
+  --shu-600:#b7282e;   /* 朱 vermilion — accent, active states */
+  --shu-400:#e06b5f;
+  --shu-100:#f6d9d5;
+  --shu-50:#fbefed;
+  --wood-800:#4e3420;  /* 木 dark wood — text on paper */
+  --wood-700:#6b4a2e;
+  --wood-500:#a0754a;  /* 木 mid wood — borders, hovers */
+  --wood-200:#e3d2bb;
+  --wood-100:#efe4d4;
+  --wood-50:#f8f3eb;   /* 和紙 washi paper */
+  --bg-2:#faf7f1;
+  --line-2:#f0ebe2;
+  --alert:var(--shu-700);
+  --alert-bg:var(--shu-50);
+  --grain:repeating-linear-gradient(92deg,rgba(107,74,46,.035) 0 2px,transparent 2px 9px,rgba(107,74,46,.025) 9px 10px,transparent 10px 23px);
+}
+
+/* labels & tags */
+.eyebrow{color:var(--shu-600)}
+.hero__content .eyebrow{color:#f3b9b2}
+.band .eyebrow{color:var(--wood-200)}
+.tag--urgent{border-color:var(--shu-100)}
+.alert{border-bottom-color:var(--shu-100)}
+
+/* brand mark: blue with a vermilion base line, like a 垂 tare stripe */
+.brand__mark{box-shadow:inset 0 -3px 0 var(--shu-600)}
+
+/* tinted sections: washi paper with faint wood grain */
+.section--tint{background-color:var(--bg-2);background-image:var(--grain);border-color:var(--wood-100)}
+
+/* quick links: wooden name-plate (名札) tone */
+.quick__icon{background:var(--wood-50);color:var(--wood-700);box-shadow:inset 0 0 0 1px var(--wood-100)}
+.quick__item:hover{background:var(--wood-50)}
+.quick__item:hover .quick__icon{background:#fff;color:var(--shu-600);box-shadow:inset 0 0 0 1px var(--shu-100)}
+
+/* buttons, chips, pager, sub-nav */
+.btn--outline:hover{border-color:var(--wood-500);color:var(--wood-800)}
+.chip:hover{border-color:var(--wood-500);color:var(--wood-800)}
+.pager button.is-active{background:var(--shu-600);border-color:var(--shu-600)}
+.subnav a.is-active{border-color:var(--shu-600)}
+.topic:hover{border-color:var(--wood-500)}
+.crumbs a:hover{color:var(--shu-600)}
+.nav__btn:hover,.nav__item.is-open .nav__btn{color:var(--blue-900)}
+
+/* member band: deep indigo with a soft red glow */
+.band{background:radial-gradient(120% 140% at 100% 0%,rgba(183,40,46,.28),transparent 55%),linear-gradient(135deg,var(--blue-950),var(--blue-800))}
+
+/* footer: vermilion top line, wood-toned headings */
+.footer{border-top:3px solid var(--shu-600);background-image:linear-gradient(180deg,rgba(0,0,0,0),rgba(78,52,32,.18))}
+.footer h4{color:var(--wood-200)}
+
+/* ---------- Dojo palette: more red & brown in text ---------- */
+:root{--muted:#776a5c}  /* warm grey-brown for secondary text */
+
+/* 朱 red: "view all" links, hover titles, dates, downloads */
+.link{color:var(--shu-600)}
+.link:hover{color:var(--shu-700)}
+.card:hover .card__title,.mini:hover .card__title,.list__item:hover .list__title,
+.feed__title:hover,.feed__item--link:hover .feed__title{color:var(--shu-600)}
+.event__date{background:var(--shu-50);color:var(--shu-700);box-shadow:inset 0 0 0 1px var(--shu-100)}
+.cw__dh.is-today{color:var(--shu-600)}
+.file__dl,.od__link{color:var(--shu-600)}
+
+/* 木 brown: English sub-labels, small headings, tags, numbers */
+.section__head h2 .zh,.page-head h1 .zh,.split h2 .zh{color:var(--wood-500)}
+.quick__item strong,.topic strong,.panel__head h3,.mega__head h4{color:var(--wood-800)}
+.tag{color:var(--wood-700);background:var(--wood-50);border-color:var(--wood-100)}
+.tag--urgent{color:var(--shu-700);background:var(--shu-50);border-color:var(--shu-100)}
+.stat b,.org-stats b{color:var(--wood-700)}
+.oc-txt small,.ol__lv{color:var(--wood-700)}
+.ol__lv{background:var(--wood-50);border-color:var(--wood-100)}
+.subnav a.is-active{color:var(--wood-800);background:var(--wood-50)}
+.prose blockquote{border-left-color:var(--shu-600);background:var(--wood-50);color:var(--wood-800)}
+
+/* ---------- Quick-link grid: dark indigo tiles ---------- */
+.quick__grid{background:rgba(255,255,255,.12);border-color:var(--blue-950)}
+.quick__item{background:var(--blue-950)}
+.quick__item strong{color:#fff}
+.quick__item span{color:var(--wood-200)}
+.quick__icon{background:rgba(227,210,187,.12);color:var(--wood-200);box-shadow:inset 0 0 0 1px rgba(227,210,187,.25)}
+.quick__item:hover{background:var(--blue-900)}
+.quick__item:hover .quick__icon{background:var(--shu-600);color:#fff;box-shadow:none}
