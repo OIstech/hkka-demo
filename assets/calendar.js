@@ -5,8 +5,8 @@
 
 const CATS = [
   { id: "seminar", name: "講習會", color: "#2563c7" },
-  { id: "comp", name: "比賽", color: "#dc2626" },
-  { id: "exam", name: "段級審查", color: "#b45309" },
+  { id: "comp", name: "比賽", color: "#b7282e" },
+  { id: "exam", name: "段級審查", color: "#8a5a2b" },
   { id: "training", name: "訓練班", color: "#15803d" },
   { id: "admin", name: "會務及假期", color: "#7c3aed" },
 ];
